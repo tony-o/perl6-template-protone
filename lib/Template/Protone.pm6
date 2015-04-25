@@ -16,7 +16,7 @@ method parse(:$template is copy, :$name?) {
   $code = '';
   while ($from = $template.index($.open)) {
     $code ~= 'print \'' ~ $template.substr(0, $from).subst('\'', '\\\'') ~ '\';' if ! $.trim || $template.substr(0, $from).trim.chars > 0;
-    $to = $template.index($.close);
+    $to = $template.index($.close, $from + $.open.chars);
     $code ~= "\n" ~ $template.substr($from + $.open.chars, $to - $from - $.close.chars - $.open.chars + 1);
     $template .=substr($to + $.close.chars);
   }
@@ -28,12 +28,12 @@ method parse(:$template is copy, :$name?) {
 }
 
 multi method render(Str :$template, :$data? = Nil) {
-  { callsame; return; }()  unless defined $template;
-  $.render($.parse(:$template), :$data);
+  return callsame unless defined $template;
+  return $.render($.parse(:$template), :$data);
 }
 
 multi method render(Str :$name, :$data? = Nil) {
-  $.render(%.cache{$name}, :$data);
+  return $.render(%.cache{$name}, :$data);
 }
 
 multi method render(Callable $c, :$data? = Nil) {
