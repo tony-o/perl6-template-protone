@@ -60,3 +60,23 @@ Hello WORLD!
 
 List: 0, 1, 2
 ```
+
+#Performance
+
+Yea, yea, but how fast does your car go
+
+```
+$ perl6 -Ilib bench.pl6; perl6 -Iblib/lib bench.pl6
+Benchmark:
+Timing 1000 iterations of parsing, render...
+   parsing: 11.5185 wallclock secs @ 86.8168/s (n=1000)
+    render: 0.1311 wallclock secs @ 7629.1286/s (n=1000)
+Benchmark:
+Timing 1000 iterations of parsing, render...
+   parsing: 11.4190 wallclock secs @ 87.5737/s (n=1000)
+    render: 0.1288 wallclock secs @ 7762.4681/s (n=1000)
+```
+
+#License
+
+Free for all
