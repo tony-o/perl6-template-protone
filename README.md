@@ -4,6 +4,13 @@ Creating synergy throughout the world by bringing harmonious designs and interfa
 
 Also, a templating system that allows you to embed perl6.  ```EVAL```s your templates into a callable sub and caches them for later use, if you want.
 
+##Stuff still to do or nice to haves
+
+* Don't match a closer embedded in quotes
+* Make the opener escapable
+* Run template sub in a space where custom functions are available to the template
+* Save template sub to a file so it doesn't need to be rebuilt every time app is restarted
+
 #Usage
 
 ```perl6
