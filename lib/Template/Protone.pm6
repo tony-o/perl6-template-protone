@@ -40,7 +40,9 @@ multi method render(Callable $c, :$data? = Nil) {
   my $stdout = $*OUT;
   my $output = '';
   $*OUT = class {
-    method print(*@args) { $output ~= @args.join(''); }
+    method print(*@args) { 
+      $output ~= @args.join('') if @args.elems; 
+    }
     method flush() { }
   };
   $c($data);
