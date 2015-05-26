@@ -1,4 +1,4 @@
-class Template::Protone;
+unit class Template::Protone;
 
 has Str $.open  = '<%';
 has Str $.close = '%>';
@@ -40,7 +40,7 @@ multi method render(Callable $c, :$data? = Nil) {
   my $stdout = $*OUT;
   my $output = '';
   $*OUT = class {
-    method print(*@args) { $output ~= @args.join; }
+    method print(*@args) { $output ~= @args.join(''); }
     method flush() { }
   };
   $c($data);
