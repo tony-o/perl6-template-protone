@@ -1,5 +1,7 @@
 unit class Template::Protone;
 
+use MONKEY-SEE-NO-EVAL;
+
 has Str $.open  = '<%';
 has Str $.close = '%>';
 has Bool $.trim = True;
