@@ -84,6 +84,11 @@ Timing 1000 iterations of parsing, render...
     render: 0.1288 wallclock secs @ 7762.4681/s (n=1000)
 ```
 
+#Author
+
+Tony O'Dell
+
 #License
 
-Free for all
+You can use and distribute this module under the terms of the The Artistic License 2.0.
+See the `LICENSE` file included in this distribution for complete details.
