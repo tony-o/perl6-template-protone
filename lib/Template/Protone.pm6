@@ -17,7 +17,7 @@ method parse(:$template is copy, :$name?) {
 
   $code = '';
   while ($from = $template.index($.open)) {
-    $code ~= 'print \'' ~ $template.substr(0, $from).subst('\'', '\\\'') ~ '\';' if ! $.trim || $template.substr(0, $from).trim.chars > 0;
+    $code ~= ' print \'' ~ $template.substr(0, $from).subst('\'', '\\\'') ~ '\'; ' if ! $.trim || $template.substr(0, $from).trim.chars > 0;
     $to = $template.index($.close, $from + $.open.chars);
     $code ~= "\n" ~ $template.substr($from + $.open.chars, $to - $from - $.close.chars - $.open.chars + 1);
     $template .=substr($to + $.close.chars);
