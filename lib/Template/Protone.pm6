@@ -24,7 +24,7 @@ method parse(:$template is copy, :$name?) {
     $template .=substr($to + $.close.chars);
   }
   if $template.chars.trim > 0 {
-    $code ~= ' print \'' ~ $template.subst('\'', '\\\'') ~ '\'; ';
+    $code ~= '; print \'' ~ $template.subst('\'', '\\\'') ~ '\'; ';
   }
 
 
