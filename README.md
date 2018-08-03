@@ -1,4 +1,4 @@
-#Template::Protone 
+# Template::Protone 
 
 [![Build Status](https://travis-ci.org/tony-o/perl6-template-protone.svg?branch=master)](https://travis-ci.org/tony-o/perl6-template-protone)
 
@@ -6,14 +6,14 @@ Creating synergy throughout the world by bringing harmonious designs and interfa
 
 Also, a templating system that allows you to embed perl6.  ```EVAL```s your templates into a callable sub and caches them for later use, if you want.
 
-##Stuff still to do or nice to haves
+## Stuff still to do or nice to haves
 
 * Don't match a closer embedded in quotes
 * Make the opener escapable
 * Run template sub in a space where custom functions are available to the template
 * Save template sub to a file so it doesn't need to be rebuilt every time app is restarted
 
-#Usage
+# Usage
 
 ```perl6
 use Template::Protone;
@@ -33,7 +33,7 @@ Oh, did you want variables too?  I can do <% print $data<what>; %> too.
 say $templ.render(:name<example>, :data(what => 'that'));
 ```
 
-##Output
+## Output
 
 ```
 Hello WORLD!
@@ -43,7 +43,7 @@ Oh, did you want variables too?  I can do that too.
 0, 1, 2
 ```
 
-#What's that?  You don't like <% and %> ?
+# What's that?  You don't like <% and %> ?
 
 ```perl6
 qw<...>;
@@ -63,14 +63,14 @@ List: %% for ^3 {
 qw<...>;
 ```
 
-##Output
+## Output
 ```
 Hello WORLD!
 
 List: 0, 1, 2
 ```
 
-#Performance
+# Performance
 
 Yea, yea, but how fast does your car go
 
@@ -86,11 +86,11 @@ Timing 1000 iterations of parsing, render...
     render: 0.1288 wallclock secs @ 7762.4681/s (n=1000)
 ```
 
-#Author
+# Author
 
 Tony O'Dell
 
-#License
+# License
 
 You can use and distribute this module under the terms of the The Artistic License 2.0.
 See the `LICENSE` file included in this distribution for complete details.
