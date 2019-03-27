@@ -1,6 +1,6 @@
 # Template::Protone 
 
-[![Build Status](https://travis-ci.org/tony-o/perl6-template-protone.svg?branch=master)](https://travis-ci.org/tony-o/perl6-template-protone)
+[![CircleCI](https://circleci.com/gh/tony-o/perl6-template-protone.svg?style=svg)](https://circleci.com/gh/tony-o/perl6-template-protone)
 
 Creating synergy throughout the world by bringing harmonious designs and interfaces into a collaborative space that resides between what users want and also giving people what they need.
 
