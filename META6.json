@@ -8,7 +8,7 @@
     "provides"    : {
         "Template::Protone" : "lib/Template/Protone.pm6"
     },
-    "auth"    : "github:tony-o",
+    "auth"    : "zef:tony-o",
     "authors" : [
         "Tony O'Dell"       
     ],
