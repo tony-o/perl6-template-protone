@@ -1,7 +1,5 @@
 # Template::Protone 
 
-[![CircleCI](https://circleci.com/gh/tony-o/perl6-template-protone.svg?style=svg)](https://circleci.com/gh/tony-o/perl6-template-protone)
-
 Creating synergy throughout the world by bringing harmonious designs and interfaces into a collaborative space that resides between what users want and also giving people what they need.
 
 Also, a templating system that allows you to embed perl6.  ```EVAL```s your templates into a callable sub and caches them for later use, if you want.
