@@ -1,7 +1,3 @@
-defaults:
-  steps:
-    - checkout
-    - run: tagged_release
 version: 2
 jobs:
   build:
